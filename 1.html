@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>John Peter's Devotional Epistles</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+  body {
+    font-family: 'Noto Sans', sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    margin: 2rem;
+    line-height: 1.6;
+  }
+  h1 {
+    color: #444;
+  }
+  .verse sup {
+    margin: 0.5rem -1;
+    line-height: 1.2
+  }
+  button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #444;
+    color: #fff;
+  }
+  button:hover {
+    background-color: #666;
+  }
+</style>
+</head>
+<body>
+
+<h1>Devotional Epistles of John Peter Verse Generator</h1>
+<button id="generateVerse">Generate Random Verse</button>
+<div id="verseDisplay"></div>
+  
+
+<script>
+  const epistles = {
+    '1 John Peter': { 
+      1: `
+<p><b>1</b> I, John Peter, an unworthy servant of the Lord, come before you and before the Almighty to confess my reality: I am a man of sins and weaknesses, incapable of approaching the throne of grace with merit.</p>
+<p><b>2</b> I acknowledge, with sorrow and sincerity, that many times I pronounced the holy name of Jesus in prayers and songs, but my heart was distant from Him, given to worries, doubts, and the passions of the world.</p>
+<p><b>3</b> The unworthy servant recognizes that, although one may confess with the mouth, the heart can remain hidden; words may be spoken, but feelings may be far from the truth. I live in this contrast: between the word that comes out of the mouth and the spirit that does not surrender.</p>
+<p><b>4</b> Even desiring to follow the path of holiness, I am weak and fall; even seeking the light, I am enveloped by shadows; even crying out for mercy, I feel the pain of my own resistance.</p>
+<p><b>5</b> This struggle between words and feelings makes me an unworthy servant, aware of my failures and imperfections.</p>
+<p><b>6</b> Yet, I find hope in the unmerited grace of the Lord.</p>
+<p><b>7</b> The Lord does not reject those who turn to Him with genuine repentance, even if it takes time to feel the fire of transformation.</p>
+<p><b>8</b> I seek this fire of change, even when fear and doubt try to extinguish the flame in my heart.</p>
+<p><b>9</b> I confess before you and before God that my walk is still marked by falls, hidden sins, and a distance that only the Holy Spirit can heal.</p>
+<p><b>10</b> Even in my unworthiness, I believe in the promise of forgiveness, in the power of redemption, and in the infinite patience of the Father.</p>
+<p><b>11</b> I am neither righteous nor perfect; I am an unworthy servant who cries out for transformation, renewal, and sanctification.</p>
+<p><b>12</b> May these words serve as comfort and encouragement for those who, like me, stumble on the path.</p>
+<p><b>13</b> I ask the Lord to touch hardened hearts, illuminate those who live in the darkness of sin, and restore those who feel distant from His love.</p>
+<p><b>14</b> I write this letter in the quiet of the night, in moments of deep reflection, aware of the need to seek God more fervently.</p>
+<p><b>15</b> May the Lord, in His infinite mercy, make me worthy, not by my merits, but by His love and sacrifice.</p>
+<p><b>16</b> To You, Lord, I surrender my being, my soul, and my heart. May I be a faithful servant, even if unworthy. Amen.</p>
+      `,
+      2: `<p><b>1</b> Woe to me if I do not repent! For time passes swiftly like the wind, and the soul that does not humble itself before the Lord will be swept away by the storms of His justice.</p>
+<p><b>2</b> I can no longer hide my sins, nor pretend to be holy. The gaze of God penetrates where no human eye can reach.</p>
+<p><b>3</b> My actions do not justify me. My words do not save me. Only a contrite heart can touch the heart of the Almighty.</p>
+<p><b>4</b> Why wait to repent, if I do not know what tomorrow holds? The time of grace is now, and the call to change sounds like a trumpet from heaven.</p>
+<p><b>5</b> Each day without repentance is like a stone cast against my own soul.</p>
+<p><b>6</b> O Lord, do not let my heart harden before Your voice! May Your mercy break me so that I may be rebuilt.</p>
+<p><b>7</b> For I know that repentance is not just tears, but transformation; it is not only feeling, but a firm decision.</p>
+<p><b>8</b> I cry out like a publican in the temple: "Have mercy on me, a sinner!" For I acknowledge my unworthiness before You.</p>
+<p><b>9</b> My pride was my prison, and my resistance, my punishment.</p>
+<p><b>10</b> Yet the Lord calls with eternal love; and even in my rebellion, He does not abandon me.</p>
+<p><b>11</b> Blessed is the pain that leads to repentance, and blessed is the brokenness that precedes healing.</p>
+<p><b>12</b> I do not want to live any longer in the shadows. I desire to walk in the light, even if it exposes my wounds.</p>
+<p><b>13</b> Let repentance be my refuge, and let forgiveness be my daily nourishment.</p>
+<p><b>14</b> Woe to me if I do not repent! For grace is offered, but not imposed. And the time for decision is now.</p>
+<p><b>15</b> God does not delight in the destruction of the sinner. His desire is that all repent and live.</p>
+<p><b>16</b> He extends His hands day and night, calling the weary, the wounded, the proud, and the forgotten.</p>
+<p><b>17</b> There is no sin His grace cannot forgive, nor a fall so deep that His hand cannot reach.</p>
+<p><b>18</b> Therefore, do not harden your hearts. For God wants to restore, renew, and redeem all who turn to Him sincerely.</p>`,
+      3: `<p><b>1</b> The Lord's promise remains firm: He will return in power and great glory, as the eternal King of all creation.</p>
+<p><b>2</b> Many doubt, others mock; but those who believe live in anticipation of meeting the Bridegroom.</p>
+<p><b>3</b> His coming will not be announced by men, but revealed by heaven itself, in a clear and impressive way.</p>
+<p><b>4</b> No wall can hide the One who comes; and no soul can escape His presence.</p>
+<p><b>5</b> That day will be a day of joy for the faithful, but of surprise and astonishment for those who lived as if God did not exist.</p>
+<p><b>6</b> Those who walk in the light do not fear the Lord's return, because their hope is firmly rooted in the truth.</p>
+<p><b>7</b> But woe to those who reject mercy! For them, only the expectation of judgment remains.</p>
+<p><b>8</b> The Lord does not forget His promises: He is patient, waiting for more people to surrender to His love.</p>
+<p><b>9</b> Like watchmen in the early morning, we must keep watch, waiting for the first ray of His glory.</p>
+<p><b>10</b> Keep your garments clean, and your hearts ready, for no one knows the day or hour of His return.</p>
+<p><b>11</b> Do not be distracted by the things of this world; the day of the Lord will come as a surprise to the unprepared.</p>
+<p><b>12</b> Strengthen the weak, encourage the weary, and proclaim loudly: "Behold, the King comes!"</p>
+<p><b>13</b> Let every step be guided by eternity, and every word filled with hope in redemption.</p>
+<p><b>14</b> Heaven waits for the moment of final order, while the whole earth longs for the manifestation of the Son of God.</p>
+<p><b>15</b> Come, Lord Jesus! Maranatha! This is the cry of those who love You and await Your coming with reverence.</p>
+<p><b>16</b> Today is the time of grace, the breath of mercy that God still pours upon the earth.</p>
+<p><b>17</b> Do not be deceived: the invitation from heaven is still open, but not forever. Take advantage while the heart can still respond.</p>
+<p><b>18</b> Many think that tomorrow belongs to them; but tomorrow is a mystery, and today is a gift. 
+<p><b>19</b> The door of grace is still open. Enter with humility, for soon it will close, and the time of judgment will come.</p>`,
+      4: `<p><b>1</b> Blessed are those who have friends who love the Lord with all their heart, for they will walk in faithful companionship and be strengthened in their faith.</p>
+<p><b>2</b> The righteous rejoice in walking with godly people, for from them come holy counsel and encouragement in difficulties.</p>
+<p><b>3</b> Friendships based on the fear of the Lord are like deep roots: they withstand the winds and produce good fruit.</p>
+<p><b>4</b> But ties with the wicked are like hidden traps, which ensnare the heart and divert steps from the right path.</p>
+<p><b>5</b> The soul is nourished by holy fellowship, and the spirit is strengthened among those who call upon the name of the Lord together.</p>
+<p><b>6</b> Avoid the friendship of mockers, but draw near to those who pray with you and gently exhort you.</p>
+<p><b>7</b> May your friends help you seek the things above, where Christ is at the right hand of God.</p>
+<p><b>8</b> Blessed is the one who forgives, for they free themselves from the prison of resentment and rest in the embrace of mercy.</p>
+<p><b>9</b> Harboring grudges is like carrying poison within, but forgiveness is like a spring of living water that cleanses the heart.</p>
+<p><b>10</b> Forgive one another, just as God forgave you in Christ.</p>
+<p><b>11</b> Whoever chooses to forgive, even when wounded, shows that the love of God dwells within them with power.</p>
+<p><b>12</b> Do not repeat the offense in your heart; place before the cross all pain and all bitter memories.</p>
+<p><b>13</b> As Jesus said: "If you do not forgive others, the Father will not forgive you either."</p>
+<p><b>14</b> Whoever truly loves also forgives, for love covers a multitude of sins.</p>
+<p><b>15</b> Be careful with persuasive words that lead away from the simplicity of the Gospel.</p>
+<p><b>16</b> Many consider themselves wise according to the world, but they do not know the wisdom that comes from above.</p>
+<p><b>17</b> Flee from human ideas that divert from faith; instead, remain faithful to the teaching of the apostles and prophets.</p>
+<p><b>18</b> Do not let anyone deceive you with empty speeches; rather, grow in grace and in the knowledge of our Lord Jesus Christ.</p>`,
+      5: `<p><b>1</b> Avoid worthless arguments, for they only bring division and spiritual destruction.</p>
+<p><b>2</b> Remember what Scripture teaches: "The servant of the Lord must not quarrel, but be gentle, patient, and always ready to teach."</p>
+<p><b>3</b> Useless debates only feed pride and ego; but the wisdom that comes from God produces peace and humility.</p>
+<p><b>4</b> Do not engage in arguments about words, because it only confuses and hinders those who hear.</p>
+<p><b>5</b> The foolish person speaks without thinking, but the wise know when to remain silent and guard their heart.</p>
+<p><b>6</b> If someone insists on quarrels, advise them once or twice. But if they do not change, withdraw so as not to be contaminated.</p>
+<p><b>7</b> True doctrine is not confirmed with shouts, but with a transformed life and words full of grace.</p>
+<p><b>8</b> Avoid those who waste time arguing over genealogies, human traditions, or empty philosophies.</p>
+<p><b>9</b> True godliness is in loving, believing, obeying, and maintaining the unity of the Spirit.</p>
+<p><b>10</b> If a brother speaks harshly against you, respond with gentleness and pray for him.</p>
+<p><b>11</b> Many are lost because they always want to be right, forgetting that charity builds more than argument.</p>
+<p><b>12</b> Let your goal be to build up, not to win; to reconcile, not to humiliate.</p>
+<p><b>13</b> Remember: even the Lord Jesus, before those who accused Him, often chose silence.</p>
+<p><b>14</b> Wise silence is more powerful than hasty words.</p>
+<p><b>15</b> The only worthwhile discussion is that which leads to truth and produces repentance.</p>
+<p><b>16</b> Do not let zeal make you harsh, nor firmness take away your gentleness.</p>
+<p><b>17</b> Scripture says: "The wisdom that comes from above is first pure, then peaceable, gentle, humble, full of mercy."</p>
+<p><b>18</b> Stay away from those who love to provoke, for the spirit of contention does not come from God.</p>
+<p><b>19</b> Seek peace with all, and strive to live rightly before the Lord and men.</p>
+<p><b>20</b> Praise be to God, our Father, and praise be to the name of our Lord Jesus Christ.</p>
+<p><b>21</b> We pray that He strengthens your hearts in faith and love, and always guides you in His truth.</p>
+<p><b>22</b> We also ask the Lord to grant you peace and perseverance amid difficulties.</p>
+<p><b>23</b> May the grace of the Lord be with you all, so that you may remain steadfast until the end.</p>
+<p><b>24</b> We pray that you be strengthened in spirit, mind, and heart, always living according to the will of the Father.</p>
+<p><b>25</b> Whoever calls upon the name of the Lord sincerely will be saved and receive eternal life. Amen.</p>`
+    },
+    '2 John Peter': { 1: `<p><b>1</b> John Peter, an unworthy servant of the Lord Jesus Christ, writes to you so that you may be warned.</p>
+<p><b>2</b> May the grace and peace of God be abundant in your lives, strengthening the faith you already possess.</p>
+<p><b>3</b> It is important to understand that the grace we receive does not nullify God’s Law, but gives us strength to obey it from the heart.</p>
+<p><b>4</b> True faith is manifested in actions, not just words; therefore, live according to the Lord’s principles.</p>
+<p><b>5</b> Guard integrity in all things, avoiding hypocrisy and straying from the right path.</p>
+<p><b>6</b> Grow in the knowledge of God and in the practice of love, which is the essence of His Law.</p>
+<p><b>7</b> Strengthen yourselves in every trial, knowing that God uses these experiences to perfect our character.</p>
+<p><b>8</b> Avoid useless discussions about the Law, but understand what it truly teaches and apply it in your lives.</p>
+<p><b>9</b> God’s Law is just and good; rejecting it or misinterpreting it is to stray from the path of life.</p>
+<p><b>10</b> Remember the promises of the Lord, and let them guide your actions and decisions daily.</p>
+<p><b>11</b> Be obedient in everything, not out of obligation, but out of love for God who saved us by grace.</p>
+<p><b>12</b> True obedience does not diminish grace; on the contrary, it confirms it and makes it effective in our lives.</p>
+<p><b>13</b> Avoid vanity and pride, for those who humble themselves before God will be exalted according to His will.</p>
+<p><b>14</b> Love one another sincerely, demonstrating that faith is translated into concrete actions.</p>
+<p><b>15</b> Guard your heart against all deception and false doctrine that seeks to confuse the faithful.</p>
+<p><b>16</b> Do not be carried away by human philosophies that contradict the Word of God.</p>
+<p><b>17</b> Live with discernment, knowing that every choice should reflect the fear of God.</p>
+<p><b>18</b> Strengthen the weak in faith, encouraging them to remain steadfast in obedience.</p>
+<p><b>19</b> Remember that the Lord is patient, but also just; everyone will give an account of their actions.</p>
+<p><b>20</b> Therefore, be vigilant, maintaining integrity and love in everything you do.</p>
+<p><b>21</b> The grace of God calls us to obey, and obedience does not invalidate His mercy; on the contrary, it fully manifests it.</p>`, 2: `<p><b>1</b> My brothers, remember that obedience to the Law is not a burden, but a reflection of the love God has given us.</p>
+<p><b>2</b> The Sabbath, now seen in the light of the New Covenant, is an invitation to communion with God, not a heavy burden.</p>
+<p><b>3</b> He invites us to rest, reflect, and draw near to His heart, remembering that His mercy sustains us.</p>
+<p><b>4</b> Keeping this time is an act of faith and gratitude, not merely of obligation.</p>
+<p><b>5</b> The Law remains a guide, but grace enables us to fulfill it fully and voluntarily.</p>
+<p><b>6</b> Do not cling to the letter that kills, but to the practice that gives life and strengthens faith.</p>
+<p><b>7</b> The Sabbath is a sign of hope and renewal, reminding us of the rest we will have eternally in Christ.</p>
+<p><b>8</b> To live this way demonstrates that we understand the true intention of the Law, guided by God’s love and mercy.</p>
+<p><b>9</b> May every encounter with Him be a cause for joy, not rigidity or judgment.</p>
+<p><b>10</b> It is not enough just to know the Law or hear the Word; it must be practiced with sincerity and dedication.</p>
+<p><b>11</b> Guard your heart and thoughts, letting the Word transform your actions.</p>
+<p><b>12</b> Let love and compassion guide your relationships, reflecting God’s presence in every action.</p>
+<p><b>13</b> The mercy we receive must be shared, helping to heal wounds and draw hearts together.</p>
+<p><b>14</b> Thus, living the Word becomes natural, making our faith visible in acts of kindness and care.</p>`, 3: `<p><b>1</b> My brothers, pay attention: the Gospel is for everyone, but it does not tolerate everything. It is a path of life, not a license to sin.</p>
+<p><b>2</b> Everyone who draws near to God must understand that faith requires real transformation, not just appearance.</p>
+<p><b>3</b> Many are led by passions and desires that destroy the soul; these are the works of the flesh.</p>
+<p><b>4</b> Selfishness, hatred, envy, pride, and vanity — all of these destroy communion with God and lead away from the path of salvation.</p>
+<p><b>5</b> Lies, covetousness, and malice corrode the heart, making God’s forgiveness useless if there is no repentance.</p>
+<p><b>6</b> Ignorance and excuses do not hide sin; it always returns to those who practice it.</p>
+<p><b>7</b> Whoever insists on living according to their own will, rejecting the Law and grace, prepares the ground for spiritual destruction.</p>
+<p><b>8</b> Deliberate sin is playing with fire: there is a risk of moving away from mercy and receiving condemnation.</p>
+<p><b>9</b> Rejecting the voice of the Holy Spirit is a dangerous path; this obstinacy can result in an unforgivable sin that separates from the presence of God.</p>
+<p><b>10</b> But there is hope for those who repent and seek to live in obedience; the Lord is patient and desires to restore every sincere heart.</p>
+<p><b>11</b> Therefore, rise up, watch, and practice righteousness, showing that faith is not only belief, but action.</p>
+<p><b>12</b> Let the light of Christ shine in you, so that others may see your works and glorify God.</p>
+<p><b>13</b> And may God’s grace, mercy, and peace be abundant upon all who remain steadfast in the truth, today and forever. Amen.</p>` },
+    '3 John Peter': { 1: `<p><b>1</b> John Peter, an unworthy servant of Jesus Christ, sends greetings to all who love God sincerely.</p>
+<p><b>2</b> May the peace and grace of the Lord be with you, strengthening your faith and hope each day.</p>
+<p><b>3</b> My brothers, worshiping God individually is essential, but it does not replace fellowship with others who also seek Him.</p>
+<p><b>4</b> Gathering with brothers strengthens faith, builds the heart, and reminds us that we are part of the body of Christ.</p>
+<p><b>5</b> Collective worship is a reflection of the love we have for God and for our brothers, not merely a religious duty.</p>
+<p><b>6</b> Each shared service should be conducted with reverence, sincerity, and a humble spirit.</p>
+<p><b>7</b> God’s Word teaches that we should not neglect gatherings, but encourage one another in the faith.</p>
+<p><b>8</b> May fellowship and unity be visible marks of our love for Christ.</p>
+<p><b>9</b> Worshiping in spirit and truth is a gift, but without sharing life with others, our faith becomes incomplete.</p>
+<p><b>10</b> Participate in celebrations, learn from the brothers, and serve with joy, without pride or competition.</p>
+<p><b>11</b> Music, prayer, and biblical instruction connect us, reminding us that God dwells where His people gather in His name.</p>
+<p><b>12</b> Collective worship is also an opportunity to help the needy and comfort the afflicted.</p>
+<p><b>13</b> Witnessing together strengthens both individual and collective faith, showing that the Gospel is lived, not just spoken.</p>
+<p><b>14</b> Never underestimate the importance of the gathered body; it is an instrument of blessing and transformation.</p>
+<p><b>15</b> Therefore, worship God with all your heart, but remember that the presence of the brothers is an essential part of His will.</p>`, 2: `<p><b>1</b> My brothers, tithing is an act of gratitude and recognition that everything belongs to God.</p>
+<p><b>2</b> It must be given with a sincere heart, not out of obligation, fear, or social pressure.</p>
+<p><b>3</b> When we give with joy, we demonstrate trust in the Lord’s provision and care.</p>
+<p><b>4</b> The tithe is a practice that strengthens faith, reminding us that God is the owner of all things.</p>
+<p><b>5</b> Be faithful in every offering, for faithfulness reflects the sincerity of the heart.</p>
+<p><b>6</b> Do not allow routine to turn tithing into a mechanical act; motivation is more important than quantity.</p>
+<p><b>7</b> Guard your heart against vanity: giving just to be seen or praised cancels the blessing of the offering.</p>
+<p><b>8</b> Giving out of pride or appearance is dangerous; it does not please God and brings no true reward.</p>
+<p><b>9</b> Give with joy and freedom, knowing that God sees the heart, not just the gesture.</p>
+<p><b>10</b> Remember that sincere generosity opens doors for spiritual blessings and strengthens faith.</p>
+<p><b>11</b> The Lord honors faithfulness and voluntary giving, multiplying what is given with love.</p>
+<p><b>12</b> Thus, tithing should be a reflection of gratitude, trust, and devotion to the God who sustains us.</p>
+<p><b>13</b> Beyond the tithe, offerings are an expression of love and service to God.</p>
+<p><b>14</b> They build the Kingdom, strengthen the needy, and sustain the Lord’s work.</p>
+<p><b>15</b> Give with joy, not out of obligation or vanity, remembering that God loves those who give with sincere generosity.</p>
+<p><b>16</b> Offerings should be planned, conscious, and the fruit of a grateful heart.</p>
+<p><b>17</b> Avoid giving due to pressure, appearance, or competition among brothers; God always sees the motivation of the heart.</p>
+<p><b>18</b> Generosity is a way to express living faith, not merely an external gesture.</p>
+<p><b>19</b> When we give with love, we invest in the growth of the Kingdom and the transformation of lives.</p>
+<p><b>20</b> The Lord rewards faithfulness and sincerity, using each offering to accomplish His purposes.</p>`, 3: `<p><b>1</b> My brothers, before attending the service, prepare your hearts with sincerity and repentance.</p><p><b>2</b> Confess your sins to God, remembering that He sees everything and knows every intention.</p><p><b>3</b> Purify your mind and spirit, setting aside distractions and daily concerns.</p><p><b>4</b> Do not enter with pride or vanity, but with humility and reverence.</p><p><b>5</b> Examine yourself before entering, ensuring that love and faith are present in your actions.</p><p><b>6</b> If there is offense or resentment, seek reconciliation, for communion with God requires peace.</p><p><b>7</b> Personal prayer should precede the service, opening space to hear the voice of the Lord.</p><p><b>8</b> Collective worship is more fruitful when each heart is aligned with the truth and grace of God.</p><p><b>9</b> Remember that the presence of God is real; He dwells where His people gather in spirit and truth.</p><p><b>10</b> Prepare your body and spirit: fasting, prayer, and meditation strengthen the mind and heart.</p><p><b>11</b> Avoid external and internal distractions; focus on worshiping and glorifying the Lord.</p><p><b>12</b> The service is not a formality, but an opportunity for communion with God and with the brothers.</p><p><b>13</b> Every gesture, word, and action should reflect the fear and love of the Lord.</p><p><b>14</b> Enter with joy and gratitude, knowing that God delights in those who sincerely seek Him.</p><p><b>15</b> The bread symbolizes the body of Christ, and the cup symbolizes His blood shed for us; both must be received with reverence.</p><p><b>16</b> Taking the Lord's Supper irreverently, without repentance or in sin, is dangerous and goes against God's will.</p><p><b>17</b> Whoever participates in the Supper without a sincere heart, faith, and repentance cannot experience communion with Christ.</p><p><b>18</b> Examine yourself, therefore, before approaching the Lord's table, so that you are not judged.</p><p><b>19</b> The Supper is a memorial of Jesus’ death and resurrection; respect this moment, remembering that it is holy and serious.</p><p><b>20</b> Receive with gratitude, remembering that Christ gave His life for all, and that each participant is called to live in holiness.</p><p><b>21</b> The Supper should strengthen faith, renew the commitment to God, and edify the community.</p><p><b>22</b> Each person must participate consciously, reflecting on their actions and seeking righteousness before God.</p><p><b>23</b> Thus, the ordinance of the Supper is not merely symbolic, but an act of faith, repentance, and communion with the Savior.</p>`, 4: `<p><b>1</b> Music in the church is not just sound, but a means to lead hearts to God and strengthen the faith of each brother and sister, remembering that each note and lyric should point to Christ and not to ourselves.</p><p><b>2</b> Not every hymn serves; it is necessary to discern what edifies, what inspires joy, worship, gratitude in the offering, or reverence during the Lord’s Supper.</p><p><b>3</b> Hymns of joy celebrate the Lord’s victories and remind that each spiritual achievement is the fruit of God’s grace, bringing joy and renewal to the congregation.</p><p><b>4</b> Hymns of worship lead the heart to recognize God’s greatness, allowing each person to give their life and sincere surrender to the Lord.</p><p><b>5</b> Hymns during the offering remind that generosity is a form of worship, and hymns during the Supper connect our worship to Jesus’ sacrifice on the cross and the commitment to live according to His teachings.</p><p><b>6</b> To serve in the ministry of praise, humility, dedication, and holy living are required; those who act out of vanity or to impress others fail to fulfill true worship, which is always for God.</p><p><b>7</b> Avoid playing or singing to impress; the music must edify, unite, and prepare hearts, not distract or feed personal pride.</p><p><b>8</b> Every hymn and every gesture must reflect integrity, reverence, and genuine love for God, remembering that the ministry of praise is an expression of service, not prestige.</p><p><b>9</b> Let every note and word sung be done with sincerity, love for others, and desire to glorify God above all.</p><p><b>10</b> Worship is an act of total surrender, and those who minister it must always remember that the motivation is the glory of God, not human praise.</p><p><b>11</b> Avoid any selfish motivation; God deserves genuine honor, and every hymn must lead to the edification of the body and growth of faith.</p><p><b>12</b> Each hymn, each melody, and each gesture must be reflections of love for God and reverence for His presence.</p><p><b>13</b> The Word must be preached faithfully, without distortions, with courage to confront sin, teach the truth, and inspire life transformation, remembering that the goal is to restore hearts and guide the congregation to holiness.</p><p><b>14</b> Each message must point to Christ, not the preacher, showing that faith is not theory but practice that changes lives.</p><p><b>15</b> Avoid human philosophies or interpretations that divert focus from the Gospel; God’s truth does not need to be adapted to please or impress.</p><p><b>16</b> The focus of preaching is Christ, and only those called by God may minister the Word; being a preacher requires humility, commitment, and sensitivity to the Spirit, knowing that speaking of God is a serious responsibility.</p><p><b>17</b> Preach clearly and simply, yet deeply, with conviction and love, so that all understand, apply, and are transformed by the Gospel.</p><p><b>18</b> Preaching must confront, comfort, and instruct, always guided by the Spirit, so that the power of the Word works in each listener’s life, promoting repentance and spiritual growth.</p><p><b>19</b> Remember: the goal is not to impress or gain applause, but to transform hearts, guiding them to communion with God and real life change.</p><p><b>20</b> These are the ordinances I have given you: let every hymn, every word, and every gesture be done for the glory of God and the edification of the body of Christ.</p><p><b>21</b> May the grace, peace, and wisdom of the Lord abound upon all who persevere in living according to these instructions, today and forever. Amen.</p>` },
+    '4 John Peter': { 1: `<p><b>1</b> John Peter, an unworthy servant of Jesus Christ, sends greetings to all brothers who remain steadfast in faith, reminding that the grace and peace of the Lord must abound in every life.</p><p><b>2</b> May the presence of the Lord strengthen your hearts and grant you wisdom, faith, and discernment to understand the signs of the times.</p><p><b>3</b> My brothers, prepare yourselves: the final service within the churches is approaching, a unique moment in which the glory of God will be manifested.</p><p><b>4</b> Every heart will be confronted: accepting the message means preparation and faith, but rejecting it results in separation from the Lord’s presence and inescapable judgment.</p><p><b>5</b> This will be the last praise, a song announcing the coming of the King of Kings; every voice that sings with sincerity will reflect the believer’s hope and the imminence of the fulfillment of divine promises.</p><p><b>6</b> Let every believer examine their life, seek holiness, and live in fear, recognizing that time is short and the end is near.</p><p><b>7</b> The final preacher will proclaim the Word with authority, exhorting all to repentance, reminding that the Son of Man will come at an unexpected hour, and no one can escape the manifestation of God’s justice if they reject the truth.</p><p><b>8</b> This final service will be marked by true praise, sincere prayer, and proclamation of divine justice; every gesture and word must reflect faithfulness to Christ, not human pride or vanity.</p><p><b>9</b> Whoever hears, believes, and obeys will be prepared; every action done in faith will be remembered by the Lord on the day of judgment.</p><p><b>10</b> The last praise and the final preaching are not merely symbols: they are the final opportunities for repentance and to accept Christ’s redemptive work.</p><p><b>11</b> May every soul awaken, every heart be converted, and every life seek the necessary spiritual preparation.</p><p><b>12</b> Accept the Word, listen to the message, and put holiness into practice, so that in the final service you may be ready and steadfast, while judgment falls on those who reject grace and do not repent.</p>`, 2: `<p><b>1</b> My brothers, listen carefully: do not be deceived, for God requires complete transformation; renunciation of sin is not optional, it is a commandment.</p><p><b>2</b> Those who live in spiritual comfort and refuse to confront their errors are preparing to receive judgment, not grace.</p><p><b>3</b> Do not allow pride or laziness to lead your souls to destruction; every thought, word, and action must be submitted to God’s will.</p><p><b>4</b> Renounce the works of the flesh, lies, hypocrisy, and ambition; those who persist in deliberate sin defy God’s mercy.</p><p><b>5</b> Whoever hears and does not repent is building their own path to condemnation; there will be no excuses before the Lord’s throne.</p><p><b>6</b> Every soul that loves the world more than God will be confronted, and nothing will remain hidden when the truth is revealed.</p><p><b>7</b> Do not be seduced by human philosophies, false teachers, or worldly fashions; they are poison to the soul.</p><p><b>8</b> Every Christian is called to radical holiness; those who delay repentance are mistaken, thinking God’s time is infinite.</p><p><b>9</b> Repent now, before judgment comes; every day of negligence increases responsibility before the Lord.</p><p><b>10</b> Do not tolerate idolatry, vanity, or falsehood; the Gospel requires absolute sincerity and complete submission.</p><p><b>11</b> Those who embrace deliberate sin challenge God’s justice and walk toward eternal separation.</p><p><b>12</b> Guard your hearts, watch your actions, and purify your intentions; God sees everything and demands integrity.</p><p><b>13</b> Every disciple must renounce self, deny themselves, and follow Christ without reservation.</p><p><b>14</b> Those attached to the comforts of secular life will be rejected; true faith requires courage and total commitment.</p><p><b>15</b> Do not delay repentance or procrastinate transformation; the Lord’s time is near and will not tolerate carelessness.</p><p><b>16</b> Every step in deliberate sin is like walking on hot coals; mercy is not eternal for those who persist.</p><p><b>17</b> Abandon unbelief, disobedience, and spiritual indifference; these attitudes lead to perdition.</p><p><b>18</b> Those who refuse to renounce their errors are building their own ruin, ignoring the call to eternal life.</p><p><b>19</b> The transformation God demands is not partial but complete; every habit, desire, and attitude must submit to the Lord’s will.</p><p><b>20</b> Do not condone sin in others; demand righteousness and holiness, starting with yourself.</p><p><b>21</b> Every soul that hears this message and obeys will be strengthened; each that ignores the call condemns themselves.</p><p><b>22</b> True conversion requires action: empty words do not save, and intentions do not translate into real change.</p><p><b>23</b> Do not be deceived: God will not be deceived; every choice will be revealed, and every heart exposed.</p><p><b>24</b> Those who renounce and transform will remain firm; those who persist in sin will be swept away like chaff in the wind.</p><p><b>25</b> There is no excuse for complacency; the Gospel demands radicalness and total sincerity.</p><p><b>26</b> The Lord’s time is certain; those who do not repent will suffer immediate and eternal consequences.</p><p><b>27</b> There is no middle ground in the Christian life; either live in holiness or face judgment.</p><p><b>28</b> Renounce everything that displeases God; the Christian life does not allow comfort or relativism.</p><p><b>29</b> Every decision must reflect total submission to Christ; the unrepentant heart will be destroyed.</p><p><b>30</b> Listen and act: there is no delay in God’s justice; every lost moment brings condemnation closer.</p><p><b>31</b> Let every soul receive this warning as an urgent call to renunciation, repentance, and radical transformation. Amen.</p>` },
+    '5 John Peter': { 1: `<p><b>1</b> John Peter, unworthy servant of the Lord Jesus Christ, writes with love to all brothers who seek to live in fellowship and peace.</p><p><b>2</b> May the grace of the Father surround you, and may the Holy Spirit grant you serenity, hope, and guidance in every step of your journey.</p><p><b>3</b> My beloved, the wisdom of God is pure and perfect; it cannot be measured by human standards, for it comes from above and guides hearts to the truth.</p><p><b>4</b> While earthly wisdom is limited and unstable, divine wisdom remains firm and secure, bringing peace to those who receive it.</p><p><b>5</b> Those who trust only in their own reason stumble, but those guided by the Spirit find paths of life.</p><p><b>6</b> Human wisdom prides itself on what it knows, but God’s wisdom reveals humility, teaching us that everything comes from Him.</p><p><b>7</b> A man may accumulate much knowledge, but without the light of the Lord, he remains empty.</p><p><b>8</b> It is the fear of God that opens the door to true understanding.</p><p><b>9</b> Divine wisdom consoles the afflicted, guides the uncertain, and strengthens the weary.</p><p><b>10</b> Do not reject the counsel of the Lord, for in it there is life and hope.</p><p><b>11</b> The world passes away, but God’s Word endures, and those who rely on it will never be confused.</p><p><b>12</b> Therefore, embrace with sweetness the wisdom that comes from above, and let it shape your thoughts, words, and actions.</p><p><b>13</b> My brothers, remember: the Kingdom of God is not divided by human labels, but united in Christ Jesus.</p><p><b>14</b> When someone exalts their denomination above the Gospel, they lose sight of the love that should unite all believers.</p><p><b>15</b> Exclusivism feeds pride and division, but love generates fellowship and mutual edification.</p><p><b>16</b> Do not think that your community is better than another; the body of Christ is made up of many members, and all are precious.</p><p><b>17</b> Whoever looks with contempt on their brother walks according to the flesh, not the Spirit.</p><p><b>18</b> Unity does not mean uniformity, but sincere fellowship in Christ, above all human barriers.</p><p><b>19</b> Beware of a sectarian spirit, for it weakens God’s work; remain humble, remembering that we were all called to one body and one Lord.</p>`, 2: `<p><b>1</b> The Scriptures affirm that no vile word, no murmuring of evil, and no words that corrupt another’s heart should come from our mouths.</p><p><b>2</b> Guard your tongues, for every word has the power to build up or destroy; the mouth of one who speaks with reverence reflects the presence of God.</p><p><b>3</b> The tongue of the righteous brings life and wisdom, but the impure tongue leads to ruin and judgment.</p><p><b>4</b> Beware of vulgar jokes, gossip, or insults; all these contaminate the spirit and distance the soul from holiness.</p><p><b>5</b> Every word that comes from your mouth should be measured and guided by love and the fear of the Lord.</p><p><b>6</b> Do not be influenced by conversations that promote evil, pride, or disrespect; remain pure and vigilant.</p><p><b>7</b> When you speak, always seek truth and grace, building up those who hear and glorifying the Lord in every expression.</p><p><b>8</b> Silence, when necessary, is a virtue; and speech, when used with reverence, is an instrument of blessing.</p><p><b>9</b> Let your words bring peace, comfort, and guidance, not disturbance, discord, or scandal.</p><p><b>10</b> Therefore, brothers, watch over your speech, remembering that holiness is reflected in the way we communicate.</p><p><b>11</b> Every impure word must be replaced with praise, prayer, and encouragement.</p><p><b>12</b> Be examples of purity in language, so that others see in your words the character of Christ.</p><p><b>13</b> He who guards the tongue guards the heart, and he who guards the heart honors God.</p><p><b>14</b> Thus, the danger of corrupt speech is overcome by the fear of God and by the constant practice of virtue.</p><p><b>15</b> The sensuality of the world is deceitful; do not be seduced by images, words, or thoughts that stimulate impure desires.</p><p><b>16</b> You must guard your eyes and heart; all that is sensual, whether in reality or in thought, must be avoided.</p><p><b>17</b> Do not contemplate what provokes lust, nor give space to sin in thoughts or fantasies.</p><p><b>18</b> Every impure desire that is nurtured makes the heart vulnerable to corruption; turn away and keep the mind pure.</p><p><b>19</b> The body must not be turned into an idol; it is the temple of the Holy Spirit and must be preserved in holiness.</p><p><b>20</b> Care for your bodies with reverence and gratitude to God, remembering that every action should glorify Him, avoiding any form of impurity or idolatry.</p>`, 3: `<p><b>1</b> My brothers, the family is a precious gift from the Lord, a blessing that must be valued and preserved with love and respect.</p><p><b>2</b> Each father, mother, and sibling has a sacred role in each person’s life; mutual care and kindness strengthen the home and reflect the presence of God.</p><p><b>3</b> Honor your parents and siblings in all things, for family harmony is the fruit of obedience and respect for divine principles.</p><p><b>4</b> The home should be a place of peace, learning, and spiritual growth, where all support and edify one another.</p><p><b>5</b> Teach your children with patience and dedication, showing the way of the Lord through example and loving words.</p><p><b>6</b> The family that seeks God remains united, and the love that flows among its members is a reflection of the love of Christ.</p><p><b>7</b> Respect the differences among family members; each has gifts and responsibilities that contribute to the common good.</p><p><b>8</b> Protect family bonds with attention and care, avoiding disagreements that can wound the spirit of the home.</p><p><b>9</b> Thus, the family becomes a living testimony of God’s grace and care.</p><p><b>10</b> Children, remember: obeying your parents is obeying God; every instruction received should be embraced with respect and attentiveness.</p><p><b>11</b> Disobedience to parents opens the way to mistakes and suffering; parental care is a sign of God’s providence in our lives.</p><p><b>12</b> Listen to advice with humility, valuing the experience and wisdom of those who love you and desire your well-being.</p><p><b>13</b> Do not disregard guidance, even if it seems strict; obedience is the path to growth and protection.</p><p><b>14</b> Parents, instruct your children with love, patience, and consistency, showing the way of holiness and reverence for God.</p><p><b>15</b> Every home that practices obedience and respect flourishes; every act of love reflects the divine presence.</p><p><b>16</b> Disobedient children put their lives at risk of spiritual and emotional separation; loving discipline is a tool of care.</p><p><b>17</b> Learn to listen, understand, and follow instructions, remembering that God commands respect and reverence within the family.</p><p><b>18</b> Parents and children should cultivate sincere dialogue, patience, and understanding, avoiding conflicts that weaken family bonds.</p><p><b>19</b> The family is a school of character; those who honor their parents learn to honor God, and those who reject this order face consequences for their life and spirit.</p><p><b>20</b> Every act of respect, every word of love, and every gesture of obedience is an act of worship to God.</p><p><b>21</b> Let everyone understand that obedience to parents is a path of blessing, protection, and spiritual growth.</p><p><b>22</b> Live with reverence, caring for one another, and let love and obedience guide every day of your family life.</p>`, 4: ` <p><b>1</b> My brothers, reflect on the great love of Christ, who gave His life on the cross for each of us, demonstrating infinite mercy and boundless grace.</p><p><b>2</b> He endured pains that no human heart could understand, bore our sins, and faced rejection and humiliation so that we might have full life.</p><p><b>3</b> The Gospel we receive is not of easy comfort, but of the cross, renunciation, and transformation; it is a daily call to follow Jesus with faithfulness and love.</p><p><b>4</b> Each day is an opportunity to take up our own cross, abandon ego and passions, and walk with Christ in obedience and humility.</p><p><b>5</b> Remember the suffering, betrayal, physical and emotional pain that Christ endured, always out of love for humanity.</p><p><b>6</b> The crown of thorns, the weight of the cross, the scourging, and the crucifixion were signs of the extreme sacrifice for our redemption; contemplate this with reverence and gratitude.</p><p><b>7</b> The love of Christ is greater than all understanding; His sacrifice is an example of selflessness, humility, and fidelity to God.</p><p><b>8</b> Following Jesus means carrying your own burden, learning to love others, and renouncing everything that distances us from God.</p><p><b>9</b> Every act of kindness, every personal sacrifice, and every choice of renunciation reflects the presence of the Gospel in our lives.</p><p><b>10</b> Do not live only for yourselves; true discipleship requires a willing heart, an open spirit, and a life transformed by the cross.</p><p><b>11</b> The cross of Christ was not just a symbol, but a reality of suffering and victory; meditate on His Passion daily.</p><p><b>12</b> Every believer is called to live in the light of the resurrection, but never forgetting the price paid by our Savior.</p><p><b>13</b> Renunciation is not loss but gain; each step in obedience to Christ produces eternal fruits in heart and life.</p><p><b>14</b> The Gospel teaches that life is true when lived in love, sacrifice, and service to others, following the example of Jesus.</p><p><b>15</b> May every soul understand the depth of the cross and the extent of divine love; it transforms, purifies, and liberates.</p><p><b>16</b> Do not ignore the seriousness of the call; each day is an opportunity to reflect the life of Christ in our actions.</p><p><b>17</b> The Passion of Jesus teaches us patience, forgiveness, and obedience; His sufferings were for our sins, and His victory is our hope.</p><p><b>18</b> Follow with faith, taking up your cross daily, so that the love of Christ is visible in every word, gesture, and thought.</p><p><b>19</b> Do not be discouraged by the world; the cross is heavy, but God’s grace sustains the faithful.</p><p><b>20</b> Every act of renunciation is light on the path of the Gospel; every sacrifice made with love brings honor to Christ.</p><p><b>21</b> Contemplate the sacrifice of Jesus and let His life, death, and resurrection shape your heart and transform your soul.</p><p><b>22</b> Taking up the cross daily is not suffering in vain; it is an opportunity to follow Jesus with faithfulness and hope.</p><p><b>23</b> The death of Christ brought life; His shed blood purifies, restores, and gives strength to persevere.</p><p><b>24</b> The Passion of Christ is the supreme example of love; every believer must carry their own burden with courage and humility.</p><p><b>25</b> Follow the path of the cross with devotion, remembering that every challenge is a chance to grow in holiness.</p><p><b>26</b> May every heart feel gratitude, reverence, and joy as it reflects on the sacrifice of Jesus, living in response to His love.</p><p><b>27</b> The cross of Christ calls for complete transformation, the renunciation of sin, and total dedication to God.</p><p><b>28</b> May every life be offered in love, service, and obedience, recognizing that Christ died for each of us and lives in us through the Holy Spirit.</p>`, 5: `<p><b>1</b> My dear ones, learn to share what you have with others; giving with joy makes the heart grow and pleases God.</p><p><b>2</b> Do not keep everything you receive for yourselves, for love multiplies when we share and help those in need.</p><p><b>3</b> Every act of kindness and generosity is a seed that grows and brings fruits of joy for everyone.</p><p><b>4</b> Do not be sad if someone does not return the favor; what matters is obeying God and doing good.</p><p><b>5</b> Sharing is not just giving material things; it is giving attention, care, friendship, and words of encouragement.</p><p><b>6</b> When we help one another, we learn to live in community, and our hearts fill with happiness.</p><p><b>7</b> Remember: every act of kindness is a testimony of Jesus’ love.</p><p><b>8</b> Generosity should be constant, not only on special days; it transforms lives, including your own.</p><p><b>9</b> Be patient and understanding, helping with joy and without expecting anything in return.</p><p><b>10</b> May every child understand that sharing is a sign of love and respect for others.</p><p><b>11</b> God sees every gesture and rejoices in hearts that give themselves in love and service.</p><p><b>12</b> Children, remember: there is still time to play, learn, and grow with joy; do not try to act like adults before the time.</p><p><b>13</b> The child’s heart is precious and must be cared for; those who grow up too quickly miss important moments of learning and innocence.</p><p><b>14</b> Enjoy each day of childhood, learning, playing, and obeying your parents, so that in the future you become wise and kind adults.</p><p><b>15</b> Do not try to take on responsibilities you cannot yet understand; God wants you to grow step by step.</p><p><b>16</b> Obeying and trusting your parents helps to form character and prepare for the future.</p><p><b>17</b> Every child should respect limits and rules, knowing that growing with care is a gift from God.</p><p><b>18</b> May all, children and adults alike, receive God’s blessing upon their lives; may the love of Jesus fill every heart with joy, peace, and courage.</p><p><b>19</b> May the Lord guide each one along paths of wisdom and kindness, protecting and leading with tenderness and patience.</p><p><b>20</b> May faith, hope, and joy always be present, reminding us that God loves each one in a unique and perfect way.</p><p><b>21</b> To Him be all honor, glory, and praise, now and forever, for He is faithful, good, and just to all who love Him. Amen.</p>` }
+  };
+
+  function generateRandomVerse() {
+    const filledVerses = [];
+
+    // Percorre capítulos com conteúdo
+    Object.keys(epistles).forEach(book => {
+      Object.keys(epistles[book]).forEach(ch => {
+        if (epistles[book][ch].trim() !== ``) {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(epistles[book][ch], 'text/html');
+          const verses = doc.querySelectorAll('p');
+          verses.forEach((verseEl, index) => {
+            filledVerses.push({
+              book,
+              chapter: ch,
+              verseNumber: index + 1,
+              text: verseEl.outerHTML
+            });
+          });
+        }
+      });
+    });
+
+    if (filledVerses.length === 0) {
+      document.getElementById("verseDisplay").textContent = "No verses available yet.";
+      return;
+    }
+
+    // Seleciona um verso aleatório
+    const randomIndex = Math.floor(Math.random() * filledVerses.length);
+    const selected = filledVerses[randomIndex];
+
+    // Exibe o verso com referência
+    document.getElementById("verseDisplay").innerHTML = `<span class="verse sup">${selected.text}<br><em>(${selected.book} ${selected.chapter}:${selected.verseNumber})</em></span>`;
+  }
+
+  document.getElementById("generateVerse").addEventListener("click", generateRandomVerse);
+</script>
+
+</body>
+</html>
+<hr style="border: none; height: 1px; background-color: black; width: 100%;">
+<p style="color: red; background-color: yellow; padding: 10px; border-radius: 5px;">
+<strong>Notice:</strong> The Devotional Epistles of John Peter are intended to guide and encourage believers in their faith, but they are not a replacement for the Bible. All teachings and reflections in these epistles should be understood in light of Scripture, which remains the ultimate authority for faith and practice.
+</p>
+<html>
+<head>
+<style>
+  #footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+</style>
+</head>
+<body>
+
+<div id="footer">© <span id="year"></span> João Pedro Barros (John Peter). All rights reserved.</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
